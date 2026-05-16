@@ -134,6 +134,10 @@ body {
     text-align: left;
 }
 
+.product-name.not-bought {
+	text-decoration: line-through;
+}
+
 .amount-controls {
     display: flex;
     justify-content: center;
