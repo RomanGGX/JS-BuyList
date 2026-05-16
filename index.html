@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
 
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+	<main class="main-container">
+		<div class="product-not-bought-box">
+			<form class="add-product">
+				<input type="text" placeholder="Назва товару" class="search">
+				<button class="btn" data-tooltip="Додати товар">Додати</button>
+			</form>		
+
+			<div class="product-item">
+				<span class="product-name">Помідори</span>
+
+				<div class="amount-controls">
+					<span class="amount">2</span>
+				</div>
+
+				<div class="product-controls">
+					<span class="bought-box">Не куплено</span>
+				</div>
+			</div>
+
+			<div class="product-item">
+				<span class="product-name">Печиво</span>
+
+				<div class="amount-controls">
+					<button class="dec-btn" data-tooltip="Зменшити к-ть">-</button>
+					<span class="amount">2</span>
+					<button class="inc-btn" data-tooltip="Збільшити к-ть">+</button>
+				</div>
+				
+				<div class="product-controls">
+					<span class="bought-box">Куплено</span>
+					<button class="cross-btn" data-tooltip="Видалити товар">×</button>
+				</div>
+			</div>
+
+			<div class="product-item">
+				<div class="product-name">
+					<input type="text" class="edit-product-name" value="Сир" placeholder="Назва товару">
+				</div>
+
+				<div class="amount-controls">
+					<button class="dec-btn-inactive" data-tooltip="Зменшити к-ть">-</button>
+					<span class="amount">1</span>
+					<button class="inc-btn" data-tooltip="Збільшити к-ть">+</button>
+				</div>
+				
+				<div class="product-controls">
+					<span class="bought-box">Куплено</span>
+					<button class="cross-btn" data-tooltip="Видалити товар">×</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-box">
+			<div class="stats-section">
+				<h2>Залишилося</h2>
+				<div class="tags-container">
+					<span class="badge">Печиво<span class="badge-num">2</span></span>
+					<span class="badge">Сир<span class="badge-num">1</span></span>
+				</div>
+			</div>
+			
+		<div class="stats-section bought-section">
+			<h2>Куплено</h2>
+			<div class="tags-container">
+				<span class="badge bought">Помідори<span class="badge-num">2</span></span>
+			</div>
+		</div>
+	</main>
+	
+	<footer>
+		<div class="author-badge">
+			<h2>Buy List</h2>
+			<div class="badge-content">
+				<div class="badge-info">Created by:</div>
+				<div class="author-name">Roman Hvozdik</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
