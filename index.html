@@ -9,21 +9,24 @@
 </head>
 <body>
 	<main class="main-container">
-		<div class="product-not-bought-box">
-			<form class="add-product">
-				<input type="text" placeholder="Назва товару" class="search">
-				<button class="btn" data-tooltip="Додати товар">Додати</button>
-			</form>		
+		<div class="product-not-bought-box" id="product-container">
+			<div class="add-product">
+				<input type="text" placeholder="Назва товару" class="search" id="search">
+				<button class="btn" id="add" data-tooltip="Додати товар">Додати</button>
+			</div>		
 
 			<div class="product-item">
 				<span class="product-name not-bought">Помідори</span>
 
 				<div class="amount-controls">
+					<button class="dec-btn" data-tooltip="Зменшити к-ть" style="display: none;">-</button>
 					<span class="amount">2</span>
+					<button class="inc-btn" data-tooltip="Збільшити к-ть" style="display: none;">+</button>
 				</div>
 
 				<div class="product-controls">
-					<span class="bought-box">Не куплено</span>
+					<button class="bought-box" data-tooltip="Зробити купленим">Не куплено</button>
+					<button class="cross-btn" data-tooltip="Видалити товар" style="display: none;">×</button>
 				</div>
 			</div>
 
@@ -37,24 +40,22 @@
 				</div>
 				
 				<div class="product-controls">
-					<span class="bought-box">Куплено</span>
+					<button class="bought-box" data-tooltip="Зробити не купленим">Куплено</button>
 					<button class="cross-btn" data-tooltip="Видалити товар">×</button>
 				</div>
 			</div>
 
 			<div class="product-item">
-				<div class="product-name">
-					<input type="text" class="edit-product-name" value="Сир" placeholder="Назва товару">
-				</div>
+				<span class="product-name">Сир</span>
 
 				<div class="amount-controls">
-					<button class="dec-btn-inactive" data-tooltip="Зменшити к-ть">-</button>
+					<button class="dec-btn not-bought" data-tooltip="Зменшити к-ть">-</button>
 					<span class="amount">1</span>
 					<button class="inc-btn" data-tooltip="Збільшити к-ть">+</button>
 				</div>
 				
 				<div class="product-controls">
-					<span class="bought-box">Куплено</span>
+					<button class="bought-box" data-tooltip="Зробити не купленим">Куплено</button>
 					<button class="cross-btn" data-tooltip="Видалити товар">×</button>
 				</div>
 			</div>
@@ -86,5 +87,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="script.js"></script>
 </body>
 </html>
